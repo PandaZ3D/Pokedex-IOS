@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,67 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="vnI-hX-pLr">
+                                <rect key="frame" x="0.0" y="55" width="375" height="612"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0n9-fn-DjY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                <color key="backgroundColor" red="0.093414627015590668" green="0.63718491792678833" blue="0.46117448806762695" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="agk-ML-XxA"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DJg-Mk-Biv">
+                                <rect key="frame" x="36" y="119" width="303" height="528"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VKY-Hj-H2W">
+                                    <size key="itemSize" width="91" height="90"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Rod-EO-YdE">
+                                        <rect key="frame" x="0.0" y="0.0" width="91" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="91" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Zww-ZL-usN">
+                                <rect key="frame" x="0.0" y="55" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="DJg-Mk-Biv" secondAttribute="trailing" constant="20" id="6nE-6y-Sl5"/>
+                            <constraint firstItem="DJg-Mk-Biv" firstAttribute="top" secondItem="Zww-ZL-usN" secondAttribute="bottom" constant="20" id="BLo-Ns-UdT"/>
+                            <constraint firstItem="Zww-ZL-usN" firstAttribute="top" secondItem="0n9-fn-DjY" secondAttribute="bottom" id="K3O-r8-LXI"/>
+                            <constraint firstItem="0n9-fn-DjY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Lje-pe-avX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vnI-hX-pLr" secondAttribute="bottom" id="U02-e7-Mdl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DJg-Mk-Biv" secondAttribute="bottom" constant="20" id="UlG-Jc-orU"/>
+                            <constraint firstItem="vnI-hX-pLr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Wh9-PL-aRs"/>
+                            <constraint firstAttribute="trailing" secondItem="Zww-ZL-usN" secondAttribute="trailing" id="c7X-fa-wV8"/>
+                            <constraint firstItem="Zww-ZL-usN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dHt-qr-tzu"/>
+                            <constraint firstItem="vnI-hX-pLr" firstAttribute="top" secondItem="0n9-fn-DjY" secondAttribute="bottom" id="e8A-kd-7Q6"/>
+                            <constraint firstItem="DJg-Mk-Biv" firstAttribute="top" secondItem="Zww-ZL-usN" secondAttribute="bottom" constant="20" id="geg-fN-GOC"/>
+                            <constraint firstItem="0n9-fn-DjY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kOu-Yk-fnX"/>
+                            <constraint firstAttribute="trailing" secondItem="vnI-hX-pLr" secondAttribute="trailing" id="qLD-v3-UMc"/>
+                            <constraint firstItem="DJg-Mk-Biv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="vFM-Fi-Ndo"/>
+                            <constraint firstAttribute="trailing" secondItem="0n9-fn-DjY" secondAttribute="trailing" id="ylp-Bz-cP9"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg" width="1920" height="1200"/>
+    </resources>
 </document>
