@@ -16,6 +16,7 @@
 		CC3D37C91F494DD80081BF26 /* PokedexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3D37C81F494DD80081BF26 /* PokedexUITests.swift */; };
 		CC3D37D71F4951950081BF26 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = CC3D37D61F4951950081BF26 /* pokemon.csv */; };
 		CC3D37DA1F4952900081BF26 /* pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3D37D91F4952900081BF26 /* pokemon.swift */; };
+		CC3D37DC1F495CA50081BF26 /* LLPIXEL3.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC3D37DB1F495CA50081BF26 /* LLPIXEL3.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CC3D37CA1F494DD80081BF26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC3D37D61F4951950081BF26 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 		CC3D37D91F4952900081BF26 /* pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pokemon.swift; sourceTree = "<group>"; };
+		CC3D37DB1F495CA50081BF26 /* LLPIXEL3.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = LLPIXEL3.ttf; path = ../LLPIXEL3.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				CC3D37AF1F494DD80081BF26 /* Assets.xcassets */,
 				CC3D37B11F494DD80081BF26 /* LaunchScreen.storyboard */,
 				CC3D37B41F494DD80081BF26 /* Info.plist */,
+				CC3D37DB1F495CA50081BF26 /* LLPIXEL3.ttf */,
 			);
 			path = Pokedex;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC3D37B31F494DD80081BF26 /* LaunchScreen.storyboard in Resources */,
+				CC3D37DC1F495CA50081BF26 /* LLPIXEL3.ttf in Resources */,
 				CC3D37B01F494DD80081BF26 /* Assets.xcassets in Resources */,
 				CC3D37D71F4951950081BF26 /* pokemon.csv in Resources */,
 				CC3D37AE1F494DD80081BF26 /* Main.storyboard in Resources */,
